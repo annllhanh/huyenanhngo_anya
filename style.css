@@ -1271,3 +1271,46 @@ a.event-name:hover {
   background: var(--bg-secondary);
   color: var(--text-primary);
 }
+
+/* ===== ADDITIONAL PHONE OPTIMIZATIONS ===== */
+@media (max-width: 480px) {
+  .floating-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 24px 16px;
+    max-height: 90vh;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  
+  .skill-category {
+    padding: 16px;
+  }
+  
+  .project-card {
+    padding: 16px;
+  }
+  
+  .hero-name {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
