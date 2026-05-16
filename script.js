@@ -10,31 +10,53 @@ function initWaves() {
     canvas.height = window.innerHeight;
   }
 
-  function drawWave(yOffset, amplitude, wavelength, speed, color) {
+  function drawWave(yOffset, amplitude, wavelength, speed, gradient, lineWidth) {
     ctx.beginPath();
-    ctx.moveTo(0, canvas.height);
-    for (let x = 0; x <= canvas.width; x += 2) {
+    // Start at left edge precisely
+    const startY = yOffset + Math.sin(time * speed) * amplitude + Math.sin(time * speed * 0.8) * (amplitude * 0.5);
+    ctx.moveTo(0, startY);
+    
+    for (let x = 0; x <= canvas.width; x += 3) {
       const y = yOffset +
         Math.sin((x / wavelength) + (time * speed)) * amplitude +
         Math.sin((x / (wavelength * 0.7)) + (time * speed * 0.8)) * (amplitude * 0.5);
       ctx.lineTo(x, y);
     }
-    ctx.lineTo(canvas.width, canvas.height);
-    ctx.closePath();
-    ctx.fillStyle = color;
-    ctx.fill();
+    
+    ctx.strokeStyle = gradient;
+    ctx.lineWidth = lineWidth || 1.5;
+    ctx.stroke();
   }
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const h = canvas.height;
+    const w = canvas.width;
 
-    drawWave(h * 0.35, 40, 600, 0.3, 'rgba(59, 130, 184, 0.025)');
-    drawWave(h * 0.45, 50, 500, 0.25, 'rgba(34, 184, 207, 0.02)');
-    drawWave(h * 0.55, 35, 700, 0.35, 'rgba(124, 58, 237, 0.012)');
-    drawWave(h * 0.7, 45, 550, 0.2, 'rgba(59, 130, 184, 0.018)');
+    // Create elegant gradients using the brand colors
+    const grad1 = ctx.createLinearGradient(0, 0, w, 0);
+    grad1.addColorStop(0, 'rgba(59, 130, 184, 0.05)'); // Blue
+    grad1.addColorStop(1, 'rgba(34, 184, 207, 0.3)');  // Cyan
 
-    time += 0.008;
+    const grad2 = ctx.createLinearGradient(0, 0, w, 0);
+    grad2.addColorStop(0, 'rgba(124, 58, 237, 0.25)'); // Purple
+    grad2.addColorStop(1, 'rgba(239, 133, 83, 0.05)'); // Orange
+
+    const grad3 = ctx.createLinearGradient(0, 0, w, 0);
+    grad3.addColorStop(0, 'rgba(34, 184, 207, 0.2)');
+    grad3.addColorStop(1, 'rgba(124, 58, 237, 0.15)');
+
+    // Draw overlapping line art
+    drawWave(h * 0.25, 45, 600, 0.3, grad1, 1);
+    drawWave(h * 0.25 + 15, 55, 580, 0.25, grad2, 1.5);
+    
+    drawWave(h * 0.55, 60, 500, 0.2, grad3, 2);
+    drawWave(h * 0.55 - 20, 45, 550, 0.28, grad1, 1);
+    
+    drawWave(h * 0.85, 40, 700, 0.35, grad2, 1.5);
+    drawWave(h * 0.85 - 10, 35, 650, 0.3, grad3, 1);
+
+    time += 0.006; // Slightly slower for a calmer vibe
     requestAnimationFrame(animate);
   }
 
