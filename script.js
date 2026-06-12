@@ -126,61 +126,122 @@ function initSkillExperience() {
 
   /* Curated skill-to-experience mappings */
   const skillMap = {
-    'research-analysis': [
-      { text: 'Researched technology landscapes, policies, and digital application trends across customer industries (Technology/AI, Manufacturing, Logistics, Utilities, Energy, Retail, Edtech, Healthcare/Medtech, Law) in APAC and the UK.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst', perf: '8-10 bidding opportunities generated' },
-      { text: 'Analyzed eligibility criteria and translated/synthesized technical requirements for public infrastructure bidding across national and international projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project bidding proposals' },
-      { text: 'Led research on AI initiatives for personalizing mental healthcare as group project team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
-      { text: 'Conducted market research and competitor analysis for youth talent programs and product management initiatives.', source: 'AIESEC in Vietnam, FHN Branch | Multiple Roles' }
+    /* ===== PROJECT MANAGEMENT ===== */
+    'project-coordination': [
+      { text: 'Managed multiple concurrent workstreams under tight deadlines with AI-driven process optimization, ensuring on-time delivery across business analysis and business development projects.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Coordinated with Vietnamese, American, and Australian stakeholders to define project timelines, track deliverables, and ensure on-time submission of cross-border project proposals.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals submitted' },
+      { text: 'Led and coordinated an 8-member research team for AI healthcare initiative; delivered research report and presentation.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader & Main Researcher' },
+      { text: 'Coordinated across teams to align goals and ensure timely execution of joint initiatives with 20+ external stakeholders.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
     ],
-    'data-collection': [
-      { text: 'Built and maintained lead databases across multiple verticals using Apollo.io and Clay.com; helped develop a new lead generation tool with the team.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Collected primary and secondary data from industry leaders, public databases, and market intelligence reports for system consulting proposals.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Gathered and analyzed lead engagement metrics, campaign performance, and audience data across marketing channels.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
-    ],
-    'data-visualization': [
-      { text: 'Structured visual analyses and infographics for strategic presentations and client-facing system consulting proposals.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Created performance dashboards and KPI reports for weekly and monthly tracking; delivered detailed performance reports and analysis to national PICs.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head' }
-    ],
-    'synthesis-planning': [
-      { text: 'Synthesized multi-source insights into system consulting proposals, pipelining to actual AI/system development engagements.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst', perf: '8-10 bidding opportunities' },
-      { text: 'Translated and synthesized technical requirements from American and Australian partners into actionable project documentation for cross-departmental coordination.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
-      { text: 'Synthesized research findings and recommended AI initiatives for healthcare as group project leader.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' }
-    ],
-    'requirements-elicitation': [
-      { text: 'Defined requirements for system consulting and AI/ML development proposals targeting enterprise clients across multiple industries.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst', perf: '8-10 bidding opportunities' },
-      { text: 'Gathered and documented investor requirements for public bidding across 10 departments and subsidiaries; analyzed eligibility for both national and international projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project bidding proposals' }
-    ],
-    'business-writing': [
-      { text: 'Authored 8-10 system consulting and AI development proposals with requirement definitions and analysis for enterprise clients across APAC and UK.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst', perf: '12.5% proposal win rate' },
-      { text: 'Published LinkedIn article series about MLOps, providing technical knowledge and thought leadership for business development.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Prepared bidding documentation, translated technical requirements, and supported documentation coordination for infrastructure projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' }
+    'timeline-management': [
+      { text: 'Coordinated with Vietnamese, American, and Australian stakeholders to define project timelines, track deliverables, and ensure on-time submission of cross-border project proposals.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals, on-time delivery' },
+      { text: 'Managed multiple concurrent workstreams — BA projects, BD pipeline, and AI automation — delivering outputs within tight deadlines.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Built weekly and monthly performance dashboards to monitor progress and track milestones across recruitment and outreach campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
     ],
     'stakeholder-management': [
       { text: 'Engaged CTOs, CIOs, CEOs, and tech leaders across APAC and the UK through email outreach (Apollo.io, Clay.com) and LinkedIn for insight validation and project scoping.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
       { text: 'Coordinated with American and Australian partners for documentation, engagement, and support arrangements on international infrastructure projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
-      { text: 'Managed relationships with 20+ international partners (India, Japan) for candidate matching and application processing; coordinated with national PICs for brand consistency.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition & Branch Leadership' }
+      { text: 'Managed relationships with 20+ external stakeholders — media sponsors, international AIESEC partners, and customers — coordinating across teams to align goals.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition & Branch Leadership' }
     ],
-    'project-coordination': [
-      { text: 'Managed multiple concurrent workstreams under tight deadlines with AI-driven process optimization.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Supported international project delivery and contributed to 8 bidding proposals across 10 departments and subsidiaries.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project bidding proposals' },
-      { text: 'Led and coordinated an 8-member research team for AI healthcare initiative; delivered research report and presentation.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader & Main Researcher' },
-      { text: 'Coordinated with national PICs to pipeline brand consistency and delivered detailed performance reports across recruitment campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head' }
+    'cross-functional': [
+      { text: 'Bridged business stakeholders and technical development teams through structured documentation (process flows, data dictionaries, user stories) for cross-functional alignment.', source: 'DataX Power Ltd. | Business Analyst' },
+      { text: 'Managed and consolidated documentation across 10 departments and subsidiaries, ensuring cross-departmental alignment for project proposals.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals' },
+      { text: 'Coordinated across Product Management, marketing, and community teams to deliver competitions and courses.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '500+ contestants, 200+ delegates' }
+    ],
+    'workflow-optimization': [
+      { text: 'Designed and implemented AI-driven workflow automations (using Gemini, Claude, and Perplexity) to streamline reporting, tracking, and administrative tasks — reducing manual effort across concurrent workstreams.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Defined requirements, designed workflows, and vibe-coded an internal Automated Lead Generation Tool — iteratively refining the tool to optimize the BD team\'s pipeline operations.', source: 'DataX Power Ltd. | Business Analyst & End-user' },
+      { text: 'Built weekly and monthly performance dashboards to identify operational bottlenecks and propose data-driven improvements to team workflows.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' },
+      { text: 'Reviewed and improved documentation workflows across 10 departments to increase speed and quality of project proposal submissions.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' }
+    ],
+
+    /* ===== BUSINESS ANALYSIS ===== */
+    'business-analysis': [
+      { text: 'Mapped and documented end-to-end business processes — including Quote-Invoice-Payment flows — for a Franchise Management System, producing flow diagrams, functional specifications, and workflow documentation.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Franchise Management System' },
+      { text: 'Conducted requirements analysis for a manufacturing client\'s Business Intelligence Enhancement project, covering demand forecasting, order fulfillment, and inventory management processes.', source: 'DataX Power Ltd. | Business Analyst', perf: 'BI Enhancement Project' },
+      { text: 'Defined requirements, designed workflows, and vibe-coded an internal Automated Lead Generation Tool — serving as both business analyst and end-user.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Internal Tool Development' },
+      { text: 'Translated complex business requirements into structured documentation (process flows, data dictionaries, user stories) to support cross-functional alignment.', source: 'DataX Power Ltd. | Business Analyst' }
+    ],
+    'requirements-elicitation': [
+      { text: 'Defined functional and business requirements for a Franchise Management System, translating stakeholder needs into structured specifications for development teams.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Franchise Management System' },
+      { text: 'Conducted requirements analysis for a manufacturing client\'s BI Enhancement project — demand forecasting, order fulfillment, and inventory management.', source: 'DataX Power Ltd. | Business Analyst', perf: 'BI Enhancement Project' },
+      { text: 'Gathered and documented investor requirements for public bidding across 10 departments and subsidiaries; analyzed eligibility for both national and international projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals' }
+    ],
+    'process-mapping': [
+      { text: 'Mapped end-to-end business processes — including Quote-Invoice-Payment flows — producing flow diagrams, functional specifications, and workflow documentation for a Franchise Management System.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Franchise Management System' },
+      { text: 'Designed end-to-end workflows for an internal Automated Lead Generation Tool, documenting the process from lead sourcing to pipeline qualification.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Internal Tool Development' },
+      { text: 'Translated complex business requirements into structured documentation including process flows, data dictionaries, and user stories.', source: 'DataX Power Ltd. | Business Analyst' }
+    ],
+    'business-writing': [
+      { text: 'Produced functional specifications, process flow diagrams, data dictionaries, and user stories for multiple projects — Franchise Management System, BI Enhancement, and Lead Generation Tool.', source: 'DataX Power Ltd. | Business Analyst' },
+      { text: 'Authored 8-10 system consulting and AI development proposals with requirement definitions and analysis for enterprise clients across APAC and UK.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Prepared bidding documentation, translated technical requirements, and supported documentation coordination for infrastructure projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' }
+    ],
+
+    /* ===== DATA & ANALYSIS ===== */
+    'data-monitoring': [
+      { text: 'Built weekly and monthly performance dashboards to monitor progress, identify operational bottlenecks, and propose data-driven improvements to team workflows.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive', perf: '230% KPI, 25% conversion increase' },
+      { text: 'Conducted requirements analysis covering demand forecasting, order fulfillment, and inventory management metrics for a manufacturing client.', source: 'DataX Power Ltd. | Business Analyst', perf: 'BI Enhancement Project' },
+      { text: 'Tracked and analyzed campaign performance metrics across channels (Facebook, Zalo, Threads, email), informing data-driven marketing decisions.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
+    ],
+    'research-analysis': [
+      { text: 'Conducted market, technology, and policy research across customer industries (Technology/AI, Manufacturing, Logistics, Energy, Healthcare, and more) in APAC and the UK.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Analyzed investor requirements and evaluation criteria, translating complex information into structured bidding documentation.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals' },
+      { text: 'Led research on AI initiatives for personalizing mental healthcare as group project team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
+      { text: 'Conducted market research and competitor analysis for youth talent programs and product management initiatives.', source: 'AIESEC in Vietnam, FHN Branch | Multiple Roles' }
+    ],
+    'data-collection': [
+      { text: 'Built and maintained lead databases across multiple verticals using Apollo.io and Clay.com; developed an internal Automated Lead Generation Tool.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Collected primary and secondary data from industry leaders, public databases, and market intelligence reports for system consulting proposals.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Gathered and analyzed lead engagement metrics, campaign performance, and audience data across marketing channels.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
+    ],
+    'data-visualization': [
+      { text: 'Structured visual analyses and infographics for strategic presentations and client-facing system consulting proposals.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Created performance dashboards and KPI reports for weekly and monthly tracking; delivered detailed performance reports and analysis.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
+    ],
+    'synthesis-planning': [
+      { text: 'Synthesized multi-source insights into system consulting proposals, pipelining to actual AI/system development engagements.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Translated and synthesized technical requirements from American and Australian partners into actionable project documentation for cross-departmental coordination.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
+      { text: 'Synthesized research findings and recommended AI initiatives for healthcare as group project leader.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' }
+    ],
+
+    /* ===== AI & AUTOMATION ===== */
+    'ai-automation': [
+      { text: 'Designed and implemented AI-driven workflow automations (using Gemini, Claude, and Perplexity) to streamline reporting, tracking, and administrative tasks — reducing manual effort and ensuring on-time delivery.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Defined requirements, designed workflows, and vibe-coded an internal Automated Lead Generation Tool using AI-assisted development.', source: 'DataX Power Ltd. | Business Analyst', perf: 'Internal Tool Development' },
+      { text: 'Completed Gemini Certified Student & Educator certification — applied AI to automate workflows, data analysis, and content creation.', source: 'Certificate | Google Gemini', perf: '2026' },
+      { text: 'Completed Google Agile Project Management Essentials Specialization, combining agile methodology with AI-driven productivity.', source: 'Certificate | Google · Coursera', perf: '2026' }
+    ],
+    'ai-tool-building': [
+      { text: 'Defined requirements, designed end-to-end workflows, and vibe-coded an internal Automated Lead Generation Tool — serving as both business analyst and end-user, iteratively refining the tool for the BD team\'s pipeline operations.', source: 'DataX Power Ltd. | Business Analyst & End-user', perf: 'Internal Tool Development' },
+      { text: 'Built an interactive web application (Tarot Card Quiz) blending storytelling, design, and AI-assisted development.', source: 'Project | Tarot Card Quiz' },
+      { text: 'Built this personal portfolio website from scratch using vanilla web technologies, Canvas API, and AI-assisted development.', source: 'Project | Personal Website' }
+    ],
+    'technology': [
+      { text: 'Worked in AI/ML consulting covering AI/ML, infrastructure, data annotation, edge AI, Software, and SaaS; researched technology landscapes and policies across APAC countries.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Researched and recommended AI initiatives for personalizing mental healthcare as team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
+      { text: 'Completed Gemini Certified Student & Educator certification, deepening practical AI workflow knowledge.', source: 'Certificate | Google Gemini' },
+      { text: 'Built interactive web applications and internal tools using AI-assisted development.', source: 'Projects | Multiple' }
+    ],
+
+    /* ===== COMMUNICATION & BUSINESS ===== */
+    'knowledge-sharing': [
+      { text: 'Managed and grew a Product Management community of 8,000+ members (~10% monthly growth), organizing knowledge-sharing content and engagement initiatives.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ members, ~10% monthly growth' },
+      { text: 'Organized competitions (500+ contestants) and courses (200+ delegates) as knowledge-sharing and skill-building programs for the PM community.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '100%+ KPI' },
+      { text: 'Published LinkedIn article series about MLOps, providing technical knowledge and thought leadership for the AI/ML industry.', source: 'DataX Power Ltd. | Business Development Executive' }
     ],
     'b2b-marketing': [
-      { text: 'Developed B2B marketing strategies for system consulting and AI development services, targeting CTOs, CIOs, and CEOs across Technology, Manufacturing, Logistics, Energy, Healthcare, and more.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Published LinkedIn posts and article series (notably on MLOps) for both client attraction and industry knowledge sharing.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Executed email outreach campaigns using Apollo.io and Clay.com; helped develop a new lead generation tool with the team.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
+      { text: 'Developed B2B marketing strategies for system consulting and AI development services, targeting CTOs, CIOs, and CEOs across Technology, Manufacturing, Logistics, Energy, Healthcare, and more.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Published LinkedIn posts and article series (notably on MLOps) for both client attraction and industry knowledge sharing.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Executed email outreach campaigns using Apollo.io and Clay.com; developed an internal Automated Lead Generation Tool.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
     ],
     'pitching': [
-      { text: 'Pitched system consulting and AI/ML solutions to prospective enterprise clients; authored requirement definitions, analysis, and tailored proposals.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst', perf: '8-10 bids, 12.5% win rate' },
+      { text: 'Pitched system consulting and AI/ML solutions to prospective enterprise clients; authored requirement definitions, analysis, and tailored proposals.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% win rate' },
       { text: 'Conducted 50+ sales consultation calls to convert leads into program participants across AIESEC Global Talent.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive', perf: '230% KPI achieved' }
     ],
     'sales-negotiation': [
       { text: 'Generated 143 qualified leads through multi-channel outreach (Facebook, Zalo, Threads, email marketing) and strategic sales consultation.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive', perf: '143 LEADs, 230% KPI, 25% conversion increase' },
       { text: 'Connected with international partners in India and Japan, matching candidates and pushing application processes.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
-    ],
-    'contract-management': [
-      { text: 'Managed cross-functional documentation, contract processes, and legal compliance across departments and subsidiaries for public infrastructure bidding.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' }
     ],
     'empathy': [
       { text: 'Built an immersive web experience exploring tarot card interpretations and the Fool\'s Journey, blending empathy-driven storytelling with interactive design.', source: 'Project | Tarot Card Quiz' },
@@ -188,25 +249,28 @@ function initSkillExperience() {
       { text: 'Organized professional photoshoot for ~100 members, capturing individual stories for an avatar changing wave that spread AIESEC brand through personal connection.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants, 100%+ KPI' },
       { text: 'Provided advisory support for international candidates from India and Japan during onboarding, bridging cultural and logistical challenges.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
     ],
+
+    /* ===== MARKETING & COMMUNITY ===== */
     'marketing-strategy': [
       { text: 'Designed and executed multi-tactic recruitment campaigns: community group seeding, email marketing, influencer marketing (KOL & KOC), university club support, leaflets & POSM, ads, and an avatar changing wave.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants in 1 month, 100%+ KPI' },
       { text: 'Led multi-channel marketing for Product Management Challenge 2023 (case competition) and Product Management Essentials 2023 (hybrid course), including event support and product/visual design.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program' },
-      { text: 'Published LinkedIn content strategy for client attraction and industry knowledge, including MLOps article series.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
+      { text: 'Published LinkedIn content strategy for client attraction and industry knowledge, including MLOps article series.', source: 'DataX Power Ltd. | Business Development Executive' }
     ],
     'content-marketing': [
-      { text: 'Managed Facebook page content strategy driving consistent audience growth; posts/stories on Facebook, Instagram, Threads.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ followers, 10% monthly growth' },
+      { text: 'Managed and grew a Product Management community of 8,000+ members, organizing knowledge-sharing content and engagement initiatives with ~10% monthly growth.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ members, ~10% monthly growth' },
       { text: 'Created content posts and group seeding across community groups for recruitment marketing campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants in 1 month' },
-      { text: 'Published LinkedIn articles and posts for both client attraction and knowledge sharing (MLOps series).', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
+      { text: 'Published LinkedIn articles and posts for both client attraction and knowledge sharing (MLOps series).', source: 'DataX Power Ltd. | Business Development Executive' }
     ],
     'copywriting': [
-      { text: 'Wrote copy for social media campaigns, email newsletters, and event marketing materials across AIESEC programs; specialized in marketing data and analytics.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program' },
+      { text: 'Wrote copy for social media campaigns, email newsletters, and event marketing materials across AIESEC programs.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program' },
       { text: 'Created campaign copy for recruitment drives across Facebook, Instagram, Threads, and email channels.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head' }
     ],
     'social-media': [
-      { text: 'Managed Facebook community of 8,000+ members and page with 8,000+ followers; moderated content and created engagement strategies.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ community, 8,000+ followers' },
+      { text: 'Managed and grew a Facebook community of 8,000+ members; moderated content and created engagement strategies with ~10% monthly growth.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ community members' },
       { text: 'Executed multi-platform campaigns (Facebook, Instagram, Threads) including an avatar changing wave using professional photoshoot of ~100 members.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants' }
     ],
     'community-building': [
+      { text: 'Managed and grew a Product Management community of 8,000+ members, organizing knowledge-sharing content and engagement initiatives.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ members, ~10% monthly growth' },
       { text: 'Led 3-member team across social media and events tactics; organized photoshoot for ~100 members for avatar changing wave to spread AIESEC brand.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants, 100%+ KPI' },
       { text: 'Connected with international partners in India and Japan, matching candidates and pushing application processes across Global Talent program.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' },
       { text: 'Supported event organization as marketing subcommittee member.', source: 'Violas Association | Marketing Subcommittee' }
@@ -214,25 +278,23 @@ function initSkillExperience() {
     'email-marketing': [
       { text: 'Pioneered email marketing tactics across AIESEC programs using Mailchimp, Beefree, and Mergo for recruitment drives and event promotion.', source: 'AIESEC in Vietnam, FHN Branch | Multiple Leadership & Executive Roles' },
       { text: 'Deployed email marketing as key tactic in multi-channel recruitment campaigns targeting university candidates.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head' },
-      { text: 'Executed B2B email outreach campaigns using Apollo.io and Clay.com targeting CTOs, CIOs, and CEOs.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
+      { text: 'Executed B2B email outreach campaigns using Apollo.io and Clay.com targeting CTOs, CIOs, and CEOs.', source: 'DataX Power Ltd. | Business Development Executive' }
     ],
-    'technology': [
-      { text: 'Worked in AI/ML consulting covering AI/ML, infrastructure, data annotation, edge AI, Software, and SaaS; researched technology landscapes and policies across APAC countries.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
-      { text: 'Researched and recommended AI initiatives for personalizing mental healthcare as team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
-      { text: 'Built an interactive web application blending storytelling, design, and AI-assisted development.', source: 'Project | Tarot Card Quiz' },
-      { text: 'Completed Gemini Certified Student & Educator certification, deepening practical AI workflow knowledge.', source: 'Certificate | Google Gemini' }
-    ],
+
+    /* ===== DOMAIN KNOWLEDGE ===== */
     'logistics': [
+      { text: 'Conducted requirements analysis for a manufacturing client\'s BI Enhancement project, covering demand forecasting, order fulfillment, and inventory management.', source: 'DataX Power Ltd. | Business Analyst', perf: 'BI Enhancement Project' },
       { text: 'Supported transport engineering and infrastructure project formation, bidding processes, and coordination with American and Australian partners.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
       { text: 'Completed coursework in logistics and supply chain management as part of International Business Economics program.', source: 'Foreign Trade University | Academic Coursework' }
     ],
     'data-management': [
       { text: 'Managed project documentation and data flows across 10 departments and subsidiaries for investment proposals and public bidding.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
-      { text: 'Specialized in data roles within marketing; tracked and analyzed campaign performance metrics across channels.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
+      { text: 'Built and maintained lead databases across multiple verticals; developed internal data tools for the BD pipeline.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Tracked and analyzed campaign performance metrics across channels, building dashboards for operational insight.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
     ],
     'public-policy': [
       { text: 'Studied international trade barriers, retaliatory tariffs, and export competitiveness through academic research and thesis work.', source: 'Foreign Trade University | Academic Research' },
-      { text: 'Researched technology policies and digital application regulations across APAC countries for consulting engagements.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
+      { text: 'Researched technology policies and digital application regulations across APAC countries for consulting engagements.', source: 'DataX Power Ltd. | Business Development Executive' }
     ],
     'finance': [
       { text: 'Completed coursework in international finance, economics, and business strategy as part of an internationally benchmarked program reviewed by Colorado State University.', source: 'Foreign Trade University | International Business Economics' }
