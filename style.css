@@ -878,6 +878,55 @@ section:nth-of-type(even) {
   font-weight: 700;
 }
 
+/* CSU Certificate mini-box inside FTU card */
+.edu-csu-cert {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(34,184,207,0.06));
+  border: 1px solid rgba(124,58,237,0.15);
+  position: relative;
+}
+
+.edu-csu-cert-badge {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--gradient-highlight);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+
+.edu-csu-cert-name {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.45;
+  margin-bottom: 5px;
+}
+
+.edu-csu-cert-issuer {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.edu-csu-link {
+  text-decoration: none;
+  background: var(--gradient-highlight);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity var(--transition);
+}
+
+.edu-csu-link:hover {
+  opacity: 0.75;
+}
+
 .certifications {
   display: flex;
   flex-direction: column;
