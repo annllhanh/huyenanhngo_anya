@@ -114,15 +114,8 @@ function initNavbar() {
   }
 }
 
-/* ===== SKILL-EXPERIENCE MATCHING ===== */
+/* ===== SKILL ACCORDION + INLINE PANELS ===== */
 function initSkillExperience() {
-  const skillTags = document.querySelectorAll('.skill-tag[data-skill]');
-  const panel = document.getElementById('skill-exp-panel');
-  const panelTitle = document.getElementById('skill-exp-title');
-  const panelList = document.getElementById('skill-exp-list');
-  const listWrap = document.getElementById('panel-list-wrap');
-  const readMoreBtn = document.getElementById('panel-read-more');
-  let activeSkill = null;
 
   /* Curated skill-to-experience mappings */
   const skillMap = {
@@ -301,76 +294,116 @@ function initSkillExperience() {
     ]
   };
 
-  skillTags.forEach(tag => {
-    tag.addEventListener('click', () => {
-      const skill = tag.dataset.skill;
+  /* ---- Helper: build inline panel HTML ---- */
+  function buildPanel(skillName, tagEl) {
+    const entries = skillMap[skillName] || [];
+    const panel = document.createElement('div');
+    panel.className = 'skill-inline-panel';
+    panel.dataset.forTag = skillName;
 
-      // Toggle off
-      if (activeSkill === skill) {
-        activeSkill = null;
-        tag.classList.remove('active');
-        panel.classList.remove('open');
-        listWrap.classList.remove('expanded');
-        readMoreBtn.classList.remove('visible');
-        readMoreBtn.textContent = 'Read more';
-        return;
-      }
+    const title = document.createElement('h5');
+    title.textContent = tagEl.textContent.trim() + ' in Practice';
+    panel.appendChild(title);
 
-      // Clear previous
-      skillTags.forEach(t => t.classList.remove('active'));
-      activeSkill = skill;
-      tag.classList.add('active');
+    const ul = document.createElement('ul');
+    if (entries.length === 0) {
+      ul.innerHTML = '<li>No direct experience entries mapped yet.</li>';
+    } else {
+      entries.forEach(e => {
+        const li = document.createElement('li');
+        let html = e.text;
+        if (e.perf) html += ' <span class="exp-perf">' + e.perf + '</span>';
+        html += '<span class="exp-source">' + e.source + '</span>';
+        li.innerHTML = html;
+        ul.appendChild(li);
+      });
+    }
+    panel.appendChild(ul);
+    return panel;
+  }
 
-      // Skip panel for Tools & Platforms
-      if (tag.hasAttribute('data-no-panel')) {
-        panel.classList.remove('open');
-        return;
-      }
+  /* ---- Remove any existing inline panel ---- */
+  function removePanel() {
+    const existing = document.querySelector('.skill-inline-panel');
+    if (existing) existing.remove();
+    document.querySelectorAll('.skill-tag.active').forEach(t => t.classList.remove('active'));
+  }
 
-      const entries = skillMap[skill] || [];
-      panelTitle.textContent = tag.textContent + ' in Practice';
-      panelList.innerHTML = '';
+  /* ---- See more: one category expanded at a time ---- */
+  document.querySelectorAll('.skill-see-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const thisRow = btn.closest('.skill-row');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-      if (entries.length === 0) {
-        panelList.innerHTML = '<li>No direct experience entries mapped yet.</li>';
-      } else {
-        entries.forEach(e => {
-          const li = document.createElement('li');
-          let html = e.text;
-          if (e.perf) {
-            html += ' <span class="exp-perf">' + e.perf + '</span>';
-          }
-          html += '<div class="exp-source">' + e.source + '</div>';
-          li.innerHTML = html;
-          panelList.appendChild(li);
-        });
-      }
-
-      // Reset collapsed state
-      listWrap.classList.remove('expanded');
-      readMoreBtn.textContent = 'Read more';
-      panel.classList.add('open');
-
-      // Show read more only if content overflows
-      setTimeout(() => {
-        const listHeight = panelList.scrollHeight;
-        if (listHeight > 150) {
-          readMoreBtn.classList.add('visible');
-        } else {
-          readMoreBtn.classList.remove('visible');
-          listWrap.classList.add('expanded');
+      // Close all other expanded rows
+      document.querySelectorAll('.skill-see-more[aria-expanded="true"]').forEach(otherBtn => {
+        if (otherBtn === btn) return;
+        const otherRow = otherBtn.closest('.skill-row');
+        otherRow.querySelectorAll('.skill-tag--hidden').forEach(t => { t.style.display = ''; });
+        otherBtn.setAttribute('aria-expanded', 'false');
+        otherBtn.textContent = 'See more';
+        // Also close any inline panel in that row
+        const otherPanel = otherRow.querySelector('.skill-inline-panel');
+        if (otherPanel) {
+          otherPanel.closest('.skill-row').querySelector('.skill-tag.active')?.classList.remove('active');
+          otherPanel.remove();
         }
-        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 120);
+      });
+
+      if (isExpanded) {
+        // Collapse this row
+        thisRow.querySelectorAll('.skill-tag--hidden').forEach(t => { t.style.display = ''; });
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'See more';
+        // Close any open panel inside
+        removePanel();
+      } else {
+        // Expand this row — show hidden tags
+        thisRow.querySelectorAll('.skill-tag--hidden').forEach(t => { t.style.display = 'inline-flex'; });
+        btn.setAttribute('aria-expanded', 'true');
+        btn.textContent = 'See less';
+      }
     });
   });
 
-  // Read more toggle
-  readMoreBtn.addEventListener('click', () => {
-    const isExpanded = listWrap.classList.toggle('expanded');
-    readMoreBtn.textContent = isExpanded ? 'Read less' : 'Read more';
+  /* ---- Skill tag click: inline panel directly inside row ---- */
+  document.querySelectorAll('.skill-row').forEach(row => {
+    row.addEventListener('click', e => {
+      const tag = e.target.closest('.skill-tag[data-skill]');
+      if (!tag || tag.classList.contains('skill-tag--no-panel')) return;
+
+      const skill = tag.dataset.skill;
+      const alreadyActive = tag.classList.contains('active');
+
+      // Remove existing panel everywhere
+      removePanel();
+
+      if (alreadyActive) return; // toggle off
+
+      // Mark active
+      tag.classList.add('active');
+
+      // Build and inject panel inside the row's header, after the tags div
+      const header = row.querySelector('.skill-row-header');
+      const panel = buildPanel(skill, tag);
+      // Insert panel as a sibling after the header (inside .skill-row)
+      header.after(panel);
+
+      // Smooth scroll to bring panel into view
+      setTimeout(() => {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    });
+  });
+
+  /* ---- Close panel when clicking outside skills section ---- */
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#skills')) {
+      removePanel();
+    }
   });
 }
+
 
 /* ===== EVENTS MODAL ===== */
 function initEventsModal() {

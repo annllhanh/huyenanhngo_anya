@@ -221,128 +221,149 @@
       <h2 class="section-title fade-in">A multidimensional toolkit.</h2>
       <p class="section-subtitle fade-in">Click a skill to see where I've applied it.</p>
 
-      <div class="skills-grid">
-        <div class="skill-category fade-in">
-          <div class="skill-icon">📋</div>
-          <h3>Project Management</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="project-coordination">Cross-functional Coordination</span>
-            <span class="skill-tag" data-skill="timeline-management">Timeline & Milestone Tracking</span>
-            <span class="skill-tag" data-skill="stakeholder-management">Stakeholder Alignment</span>
-            <span class="skill-tag" data-skill="cross-functional">Cross-functional Collaboration</span>
-            <span class="skill-tag" data-skill="workflow-optimization">Workflow Optimization</span>
+      <div class="skills-accordion fade-in">
+
+        <!-- Project Management -->
+        <div class="skill-row" data-category="project-management">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">📋</span><span>Project Management</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="project-coordination">Cross-functional Coordination</span>
+              <span class="skill-tag" data-skill="timeline-management">Timeline &amp; Milestone Tracking</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="stakeholder-management">Stakeholder Alignment</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="cross-functional">Cross-functional Collaboration</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="workflow-optimization">Workflow Optimization</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-1">
-          <div class="skill-icon">🔍</div>
-          <h3>Business Analysis</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="business-analysis">Business Process Analysis</span>
-            <span class="skill-tag" data-skill="requirements-elicitation">Requirements Elicitation</span>
-            <span class="skill-tag" data-skill="process-mapping">Process Mapping & Documentation</span>
-            <span class="skill-tag" data-skill="business-writing">Functional Specifications</span>
+        <!-- Business Analysis -->
+        <div class="skill-row" data-category="business-analysis">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">🔍</span><span>Business Analysis</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="business-analysis">Business Process Analysis</span>
+              <span class="skill-tag" data-skill="requirements-elicitation">Requirements Elicitation</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="process-mapping">Process Mapping &amp; Documentation</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="business-writing">Functional Specifications</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-2">
-          <div class="skill-icon">📊</div>
-          <h3>Data & Analysis</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="data-monitoring">Progress Monitoring & Reporting</span>
-            <span class="skill-tag" data-skill="research-analysis">Market & Industry Research</span>
-            <span class="skill-tag" data-skill="data-collection">Data Collection</span>
-            <span class="skill-tag" data-skill="data-visualization">Data Visualization</span>
-            <span class="skill-tag" data-skill="synthesis-planning">Information Synthesis & Planning</span>
+        <!-- Data & Analysis -->
+        <div class="skill-row" data-category="data-analysis">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">📊</span><span>Data &amp; Analysis</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="data-monitoring">Progress Monitoring &amp; Reporting</span>
+              <span class="skill-tag" data-skill="research-analysis">Market &amp; Industry Research</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="data-collection">Data Collection</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="data-visualization">Data Visualization</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="synthesis-planning">Information Synthesis &amp; Planning</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-3">
-          <div class="skill-icon">🤖</div>
-          <h3>AI & Automation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="ai-automation">AI-driven Workflow Automation</span>
-            <span class="skill-tag" data-skill="ai-tool-building">AI-assisted Tool Development</span>
-            <span class="skill-tag" data-skill="technology">Technology & AI Domain</span>
+        <!-- AI & Automation -->
+        <div class="skill-row" data-category="ai-automation">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">🤖</span><span>AI &amp; Automation</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="ai-automation">AI-driven Workflow Automation</span>
+              <span class="skill-tag" data-skill="ai-tool-building">AI-assisted Tool Development</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="technology">Technology &amp; AI Domain</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in">
-          <div class="skill-icon">🤝</div>
-          <h3>Communication & Business</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="knowledge-sharing">Knowledge-sharing Coordination</span>
-            <span class="skill-tag" data-skill="b2b-marketing">B2B Marketing</span>
-            <span class="skill-tag" data-skill="pitching">Pitching & Consultation</span>
-            <span class="skill-tag" data-skill="sales-negotiation">Sales & Negotiation</span>
-            <span class="skill-tag" data-skill="empathy">Empathy & Human Understanding</span>
+        <!-- Communication & Business -->
+        <div class="skill-row" data-category="communication">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">🤝</span><span>Communication &amp; Business</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="knowledge-sharing">Knowledge-sharing Coordination</span>
+              <span class="skill-tag" data-skill="b2b-marketing">B2B Marketing</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="pitching">Pitching &amp; Consultation</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="sales-negotiation">Sales &amp; Negotiation</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="empathy">Empathy &amp; Human Understanding</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-1">
-          <div class="skill-icon">📣</div>
-          <h3>Marketing & Community</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="marketing-strategy">Marketing Strategy</span>
-            <span class="skill-tag" data-skill="content-marketing">Content Marketing</span>
-            <span class="skill-tag" data-skill="copywriting">Copywriting</span>
-            <span class="skill-tag" data-skill="social-media">Social Media Management</span>
-            <span class="skill-tag" data-skill="community-building">Community Building</span>
-            <span class="skill-tag" data-skill="email-marketing">Email Marketing</span>
+        <!-- Marketing & Community -->
+        <div class="skill-row" data-category="marketing">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">📣</span><span>Marketing &amp; Community</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="marketing-strategy">Marketing Strategy</span>
+              <span class="skill-tag" data-skill="content-marketing">Content Marketing</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="copywriting">Copywriting</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="social-media">Social Media Management</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="community-building">Community Building</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="email-marketing">Email Marketing</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-2">
-          <div class="skill-icon">🌐</div>
-          <h3>Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="english">English · IELTS 7.5</span>
-            <span class="skill-tag" data-skill="chinese">Chinese · Learning</span>
-            <span class="skill-tag" data-skill="russian">Russian · Intermediate · National Olympiad</span>
-            <span class="skill-tag" data-skill="french">French · Pre-Intermediate</span>
-            <span class="skill-tag" data-skill="vietnamese">Vietnamese · Native</span>
+        <!-- Languages -->
+        <div class="skill-row" data-category="languages">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">🌐</span><span>Languages</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag skill-tag--no-panel">English · IELTS 7.5</span>
+              <span class="skill-tag skill-tag--no-panel">Vietnamese · Native</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Chinese · Learning</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Russian · Intermediate · National Olympiad</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">French · Pre-Intermediate</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in fade-in-delay-3">
-          <div class="skill-icon">🏛️</div>
-          <h3>Domain Knowledge <span style="font-size:0.7rem;font-weight:400;color:var(--text-light);margin-left:6px;">· Continuous learning</span></h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="technology">Technology & AI</span>
-            <span class="skill-tag" data-skill="logistics">Logistics & Supply Chain</span>
-            <span class="skill-tag" data-skill="data-management">Data Management</span>
-            <span class="skill-tag" data-skill="public-policy">Public Policy</span>
-            <span class="skill-tag" data-skill="finance">Finance</span>
+        <!-- Domain Knowledge -->
+        <div class="skill-row" data-category="domain">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">🏛️</span><span>Domain Knowledge</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag" data-skill="technology">Technology &amp; AI</span>
+              <span class="skill-tag" data-skill="logistics">Logistics &amp; Supply Chain</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="data-management">Data Management</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="public-policy">Public Policy</span>
+              <span class="skill-tag skill-tag--hidden" data-skill="finance">Finance</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
 
-        <div class="skill-category fade-in" data-no-panel>
-          <div class="skill-icon">⚡</div>
-          <h3>Tools & Platforms</h3>
-          <div class="skill-tags">
-            <span class="skill-tag" data-skill="ai-tools" data-no-panel>Anti Gravity × Claude Code</span>
-            <span class="skill-tag" data-skill="gemini" data-no-panel>Gemini</span>
-            <span class="skill-tag" data-skill="perplexity" data-no-panel>Perplexity.ai</span>
-            <span class="skill-tag" data-skill="jira" data-no-panel>Jira</span>
-            <span class="skill-tag" data-skill="microsoft" data-no-panel>Microsoft 365</span>
-            <span class="skill-tag" data-skill="google" data-no-panel>Google Workspace</span>
-            <span class="skill-tag" data-skill="design-tools" data-no-panel>Canva & Adobe Illustrator</span>
-            <span class="skill-tag" data-skill="email-tools" data-no-panel>Mailchimp, Beefree, Mergo</span>
-            <span class="skill-tag" data-skill="lead-gen-tools" data-no-panel>Apollo.io & Clay.com</span>
+        <!-- Tools & Platforms -->
+        <div class="skill-row" data-category="tools">
+          <div class="skill-row-header">
+            <div class="skill-row-title"><span class="skill-row-icon">⚡</span><span>Tools &amp; Platforms</span></div>
+            <div class="skill-row-tags">
+              <span class="skill-tag skill-tag--no-panel">Anti Gravity × Claude Code</span>
+              <span class="skill-tag skill-tag--no-panel">Gemini</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Perplexity.ai</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Jira</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Microsoft 365</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Google Workspace</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Canva &amp; Adobe Illustrator</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Mailchimp, Beefree, Mergo</span>
+              <span class="skill-tag skill-tag--no-panel skill-tag--hidden">Apollo.io &amp; Clay.com</span>
+            </div>
+            <button class="skill-see-more" aria-expanded="false">See more</button>
           </div>
         </div>
-      </div>
 
-      <!-- Skill-Experience Panel -->
-      <div class="skill-exp-panel" id="skill-exp-panel">
-        <h4 id="skill-exp-title">Related Experience</h4>
-        <div class="panel-list-wrap" id="panel-list-wrap">
-          <ul id="skill-exp-list"></ul>
-        </div>
-        <button class="panel-read-more" id="panel-read-more">Read more</button>
-      </div>
+      </div><!-- end skills-accordion -->
     </div>
   </section>
+
 
   <!-- Education -->
   <section id="education">

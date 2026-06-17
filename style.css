@@ -601,65 +601,74 @@ section:nth-of-type(even) {
   line-height: 1.5;
 }
 
-/* ===== SKILLS ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+/* ===== SKILLS ACCORDION ===== */
+.skills-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.skill-category {
+.skill-row {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 20px;
-  transition: var(--transition);
-  cursor: pointer;
-  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.skill-category:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+.skill-row:hover {
   border-color: transparent;
   background-image: linear-gradient(var(--bg-card), var(--bg-card)), var(--gradient-highlight);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  box-shadow: var(--shadow-sm);
 }
 
-.skill-category.active {
-  border-color: transparent;
-  background-image: linear-gradient(var(--bg-card), var(--bg-card)), var(--gradient-highlight);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: var(--shadow-md);
+.skill-row-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  flex-wrap: wrap;
 }
 
-.skill-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
+.skill-row-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.skill-row-title span:last-child {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.skill-row-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
-.skill-category h3 {
-  margin-bottom: 10px;
-  font-size: 0.92rem;
-}
-
-.skill-tags {
+.skill-row-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  flex: 1;
 }
 
 .skill-tag {
-  padding: 4px 12px;
+  padding: 5px 14px;
   background: var(--bg-secondary);
   border-radius: 50px;
   font-size: 0.76rem;
@@ -667,71 +676,103 @@ section:nth-of-type(even) {
   font-weight: 500;
   transition: var(--transition);
   cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
 }
 
-.skill-tag:hover,
+.skill-tag:hover {
+  background: transparent;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
 .skill-tag.active {
   background: var(--gradient-highlight);
   color: #fff;
+  border-color: transparent;
 }
 
-/* ===== SKILL-EXPERIENCE PANEL ===== */
-.skill-exp-panel {
-  margin-top: 20px;
-  background: var(--bg-card);
+.skill-tag--no-panel {
+  cursor: default;
+}
+
+.skill-tag--no-panel:hover {
+  background: var(--bg-secondary);
+  border-color: transparent;
+  color: var(--text-secondary);
+}
+
+.skill-tag--hidden {
+  display: none;
+}
+
+.skill-see-more {
+  flex-shrink: 0;
+  margin-left: auto;
+  background: none;
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 4px 14px;
+  transition: var(--transition);
+  white-space: nowrap;
 }
 
-.skill-exp-panel.open {
-  max-height: 2000px;
-  opacity: 1;
-  padding: 20px 24px;
+.skill-see-more:hover {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
 }
 
-.skill-exp-panel h4 {
-  font-size: 0.85rem;
+.skill-see-more[aria-expanded="true"] {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Inline In Practice panel — injected after a skill tag */
+.skill-inline-panel {
+  width: 100%;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 16px 20px 16px 56px;
+  animation: panelFadeIn 0.2s ease;
+}
+
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.skill-inline-panel h5 {
+  font-size: 0.78rem;
   font-weight: 600;
-  margin-bottom: 10px;
   color: var(--text-primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Collapsible list wrapper */
-.panel-list-wrap {
-  max-height: 140px;
-  overflow: hidden;
-  position: relative;
-  transition: max-height 0.4s ease;
-}
-
-.panel-list-wrap.expanded {
-  max-height: 2000px;
-}
-
-.panel-list-wrap:not(.expanded)::after {
+.skill-inline-panel h5::before {
   content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: linear-gradient(to bottom, transparent, var(--bg-card));
-  pointer-events: none;
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background: var(--gradient-highlight);
+  border-radius: 2px;
 }
 
-.skill-exp-panel ul {
+.skill-inline-panel ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.skill-exp-panel li {
+.skill-inline-panel li {
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.55;
@@ -739,7 +780,7 @@ section:nth-of-type(even) {
   position: relative;
 }
 
-.skill-exp-panel li::before {
+.skill-inline-panel li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -750,14 +791,15 @@ section:nth-of-type(even) {
   background: var(--gradient-highlight);
 }
 
-.skill-exp-panel .exp-source {
+.skill-inline-panel .exp-source {
   font-size: 0.73rem;
   color: var(--accent-blue);
   font-weight: 600;
   margin-top: 3px;
+  display: block;
 }
 
-.skill-exp-panel .exp-perf {
+.skill-inline-panel .exp-perf {
   font-weight: 600;
   background: var(--gradient-highlight);
   -webkit-background-clip: text;
@@ -765,28 +807,7 @@ section:nth-of-type(even) {
   background-clip: text;
 }
 
-/* Read more button */
-.panel-read-more {
-  display: none;
-  margin-top: 10px;
-  background: none;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent-blue);
-  cursor: pointer;
-  padding: 4px 0;
-  transition: var(--transition);
-}
 
-.panel-read-more:hover {
-  color: var(--accent-deep);
-}
-
-.panel-read-more.visible {
-  display: inline-block;
-}
 
 /* ===== EDUCATION ===== */
 .education-content {
