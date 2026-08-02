@@ -188,7 +188,7 @@ function initSkillExperience() {
       { text: 'Tracked and analyzed campaign performance metrics across channels (Facebook, Zalo, Threads, email), informing data-driven marketing decisions.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Data & Analytics' }
     ],
     'research-analysis': [
-      { text: 'Conducted market, technology, and policy research across customer industries (Technology/AI, Manufacturing, Logistics, Energy, Healthcare, and more) in APAC and the UK.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Conducted market, technology, and policy research across customer industries (Technology/AI, Manufacturing, Logistics, Energy, Healthcare) in APAC and the UK, producing analyses that informed strategic decisions.', source: 'DataX Power Ltd. | Business Development Executive' },
       { text: 'Analyzed investor requirements and evaluation criteria, translating complex information into structured bidding documentation.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals' },
       { text: 'Led research on AI initiatives for personalizing mental healthcare as group project team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
       { text: 'Conducted market research and competitor analysis for youth talent programs and product management initiatives.', source: 'AIESEC in Vietnam, FHN Branch | Multiple Roles' }
@@ -203,7 +203,7 @@ function initSkillExperience() {
       { text: 'Created performance dashboards and KPI reports for weekly and monthly tracking; delivered detailed performance reports and analysis.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
     ],
     'synthesis-planning': [
-      { text: 'Synthesized multi-source insights into system consulting proposals, pipelining to actual AI/system development engagements.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Synthesized research findings into structured, client-facing proposals tailored to segment-specific needs, achieving a 12.5% proposal win rate.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
       { text: 'Translated and synthesized technical requirements from American and Australian partners into actionable project documentation for cross-departmental coordination.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
       { text: 'Synthesized research findings and recommended AI initiatives for healthcare as group project leader.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' }
     ],
@@ -253,7 +253,7 @@ function initSkillExperience() {
       { text: 'Executed email outreach campaigns using Apollo.io and Clay.com; developed an internal Automated Lead Generation Tool.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
     ],
     'pitching': [
-      { text: 'Pitched system consulting and AI/ML solutions to prospective enterprise clients; authored requirement definitions, analysis, and tailored proposals.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% win rate' },
+      { text: 'Crafted tailored proposals for system consulting and AI/ML solutions, translating client-specific needs into compelling pitches.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% win rate' },
       { text: 'Conducted 50+ sales consultation calls to convert leads into program participants across AIESEC Global Talent.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive', perf: '230% KPI achieved' }
     ],
     'sales-negotiation': [
