@@ -147,6 +147,16 @@ function initSkillExperience() {
       { text: 'Built weekly and monthly performance dashboards to identify operational bottlenecks and propose data-driven improvements to team workflows.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' },
       { text: 'Reviewed and improved documentation workflows across 10 departments to increase speed and quality of project proposal submissions.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' }
     ],
+    'agile-scrum': [
+      { text: 'Completed Google Project Management Professional Certificate — covering Agile frameworks, Scrum ceremonies, sprint planning, backlog management, and retrospectives.', source: 'Certificate | Google Project Management Professional · Coursera', perf: '2026' },
+      { text: 'Completed Google Agile Project Management Essentials Specialization, reinforcing iterative delivery and Agile mindset.', source: 'Certificate | Google · Coursera', perf: '2026' },
+      { text: 'Applied iterative improvement cycles in the Automated Lead Generation Tool project — continuously refining requirements, testing, and adapting based on end-user feedback.', source: 'DataX Power Ltd. | Business Analyst & End-user' }
+    ],
+    'risk-management': [
+      { text: 'Completed Google Project Management Professional Certificate — covering risk identification, risk registers, change management processes, and mitigation planning.', source: 'Certificate | Google Project Management Professional · Coursera', perf: '2026' },
+      { text: 'Managed cross-border project formation risks for infrastructure bidding — navigating documentation gaps, eligibility criteria, and multi-department coordination under tight submission deadlines.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern', perf: '8 project proposals' },
+      { text: 'Coordinated risk mitigation in lead generation and business development pipeline — identifying stalled opportunities and adjusting outreach strategies to maintain conversion targets.', source: 'DataX Power Ltd. | Business Development Executive' }
+    ],
 
     /* ===== BUSINESS ANALYSIS ===== */
     'business-analysis': [
@@ -215,6 +225,20 @@ function initSkillExperience() {
       { text: 'Researched and recommended AI initiatives for personalizing mental healthcare as team leader in the IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' },
       { text: 'Completed Gemini Certified Student & Educator certification, deepening practical AI workflow knowledge.', source: 'Certificate | Google Gemini' },
       { text: 'Built interactive web applications and internal tools using AI-assisted development.', source: 'Projects | Multiple' }
+    ],
+    'prompt-engineering': [
+      { text: 'Completed Google AI Professional Certificate — covering prompt design, prompt chaining, few-shot and zero-shot prompting, and optimizing outputs across generative AI models.', source: 'Certificate | Google AI Professional · Coursera', perf: '2026' },
+      { text: 'Applied prompt engineering daily using Gemini, Claude, and Perplexity to automate research, drafting, analysis, and multi-step business workflows.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Designed structured prompts and iterative prompt loops to vibe-code the internal Automated Lead Generation Tool.', source: 'DataX Power Ltd. | Business Analyst & End-user', perf: 'Internal Tool Development' }
+    ],
+    'responsible-ai': [
+      { text: 'Completed Google AI Professional Certificate — covering responsible AI principles, bias identification, transparency, fairness, and ethical AI deployment frameworks.', source: 'Certificate | Google AI Professional · Coursera', perf: '2026' },
+      { text: 'Applied responsible AI considerations when designing AI-assisted workflows — evaluating outputs for accuracy and appropriateness before use in client-facing deliverables.', source: 'DataX Power Ltd. | Business Development Executive' }
+    ],
+    'ai-strategy': [
+      { text: 'Completed Google AI Professional Certificate — covering AI use case identification, organizational readiness, integration strategies, and measuring AI impact.', source: 'Certificate | Google AI Professional · Coursera', perf: '2026' },
+      { text: 'Researched AI/ML application landscapes across industries (Manufacturing, Logistics, Healthcare, Energy) to inform system consulting proposals for enterprise clients.', source: 'DataX Power Ltd. | Business Development Executive', perf: '12.5% proposal win rate' },
+      { text: 'Recommended AI initiatives for personalizing mental healthcare as group project team leader in the Tsinghua IEDE program.', source: 'IEDE Program | Tsinghua University', perf: 'Team Leader, 8 members' }
     ],
 
     /* ===== COMMUNICATION & BUSINESS ===== */
