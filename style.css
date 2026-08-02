@@ -967,6 +967,32 @@ section:nth-of-type(even) {
   font-weight: 500;
 }
 
+.cert-card--hidden {
+  display: none;
+}
+
+.cert-see-more {
+  display: inline-block;
+  margin-top: 6px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 4px 14px;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.cert-see-more:hover,
+.cert-see-more[aria-expanded="true"] {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;

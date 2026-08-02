@@ -512,12 +512,33 @@ function initFloatingBtn() {
   });
 }
 
+/* ===== CERT SEE MORE TOGGLE ===== */
+function initCertToggle() {
+  const btn = document.getElementById('cert-see-more');
+  if (!btn) return;
+  const hiddenCards = document.querySelectorAll('.cert-card--hidden');
+
+  btn.addEventListener('click', () => {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    if (isExpanded) {
+      hiddenCards.forEach(c => { c.style.display = ''; });
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'See more';
+    } else {
+      hiddenCards.forEach(c => { c.style.display = 'flex'; });
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = 'See less';
+    }
+  });
+}
+
 /* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initWaves();
   initScrollAnimations();
   initNavbar();
   initSkillExperience();
+  initCertToggle();
   initEventsModal();
   initFloatingBtn();
 });
