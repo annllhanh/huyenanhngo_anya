@@ -249,7 +249,7 @@ function initSkillExperience() {
     ],
     'b2b-marketing': [
       { text: 'Developed B2B marketing strategies for system consulting and AI development services, targeting CTOs, CIOs, and CEOs across Technology, Manufacturing, Logistics, Energy, Healthcare, and more.', source: 'DataX Power Ltd. | Business Development Executive' },
-      { text: 'Published LinkedIn posts and article series (notably on MLOps) for both client attraction and industry knowledge sharing.', source: 'DataX Power Ltd. | Business Development Executive' },
+      { text: 'Drove LinkedIn article campaigns (MLOps series, technology in Manufacturing) and website SEO, researching and synthesizing project know-how, optimizing using public repositories.', source: 'DataX Power Ltd. | Business Development Executive', perf: '2 article campaigns' },
       { text: 'Executed email outreach campaigns using Apollo.io and Clay.com; developed an internal Automated Lead Generation Tool.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' }
     ],
     'pitching': [
@@ -275,8 +275,8 @@ function initSkillExperience() {
     ],
     'content-marketing': [
       { text: 'Managed and grew a Product Management community of 8,000+ members, organizing knowledge-sharing content and engagement initiatives with ~10% monthly growth.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program', perf: '8,000+ members, ~10% monthly growth' },
-      { text: 'Created content posts and group seeding across community groups for recruitment marketing campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants in 1 month' },
-      { text: 'Published LinkedIn articles and posts for both client attraction and knowledge sharing (MLOps series).', source: 'DataX Power Ltd. | Business Development Executive' }
+      { text: 'Published 2 LinkedIn article campaigns (MLOps, technology applications in Manufacturing) by researching, synthesizing project know-how, and optimizing content via public repositories and SEO.', source: 'DataX Power Ltd. | Business Development Executive', perf: '2 article campaigns + SEO' },
+      { text: 'Created content posts and group seeding across community groups for recruitment marketing campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Branch Talent Attraction Head', perf: '244 qualified applicants in 1 month' }
     ],
     'copywriting': [
       { text: 'Wrote copy for social media campaigns, email newsletters, and event marketing materials across AIESEC programs.', source: 'AIESEC in Vietnam, FHN Branch | Marketing Executive, The A Program' },
