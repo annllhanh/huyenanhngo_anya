@@ -132,7 +132,7 @@ function initSkillExperience() {
       { text: 'Built weekly and monthly performance dashboards to monitor progress and track milestones across recruitment and outreach campaigns.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition Executive' }
     ],
     'stakeholder-management': [
-      { text: 'Engaged CTOs, CIOs, CEOs, and tech leaders across APAC and the UK through email outreach (Apollo.io, Clay.com) and LinkedIn for insight validation and project scoping.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
+      { text: 'Engaged C-level clients across APAC (including business trips to Thailand) and the UK through direct outreach and in-person meetings for insight validation and project scoping.', source: 'DataX Power Ltd. | Business Development Executive & Business Analyst' },
       { text: 'Coordinated with American and Australian partners for documentation, engagement, and support arrangements on international infrastructure projects.', source: 'Transport Engineering Design Inc. | Marketing & Project Formation Intern' },
       { text: 'Managed relationships with 20+ external stakeholders — media sponsors, international AIESEC partners, and customers — coordinating across teams to align goals.', source: 'AIESEC in Vietnam, FHN Branch | Customer Acquisition & Branch Leadership' }
     ],
