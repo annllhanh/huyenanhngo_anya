@@ -427,39 +427,43 @@ function initSkillExperience() {
     }
   });
 }
-
-
-/* ===== EVENTS MODAL ===== */
-function initEventsModal() {
-  const modalBtn = document.querySelector('.open-modal-btn');
-  const modal = document.getElementById('events-modal');
-  if (!modalBtn || !modal) return;
+/* ===== MODALS ===== */
+function initModals() {
+  const modalBtns = document.querySelectorAll('.open-modal-btn');
   
-  const closeBtn = modal.querySelector('.modal-close');
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      const closeBtn = modal.querySelector('.modal-close');
+      
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      if (closeBtn) {
+        closeBtn.onclick = closeModal;
+      }
+      
+      modal.onclick = (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      };
 
-  function openModal() {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  modalBtn.addEventListener('click', openModal);
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-  
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
+      document.addEventListener('keydown', function escListener(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+          document.removeEventListener('keydown', escListener);
+        }
+      });
+    });
   });
 }
 
@@ -539,6 +543,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initSkillExperience();
   initCertToggle();
-  initEventsModal();
+  initModals();
   initFloatingBtn();
 });
